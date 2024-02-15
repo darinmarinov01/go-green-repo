@@ -1,2 +1,2 @@
 [build]
-  command = next build"
+  command = yarn next build"
