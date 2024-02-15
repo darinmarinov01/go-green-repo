@@ -6,7 +6,9 @@ import { useTranslation } from 'next-i18next';
 import { CtfNavigationGql } from '@src/components/features/ctf-components/ctf-navigation/ctf-navigation-gql';
 import { Link } from '@src/components/shared/link';
 import Logo from '@src/icons/colorful-coin-logo.svg';
+import LogoPng from '@src/icons/logo.png';
 import { HEADER_HEIGHT, HEADER_HEIGHT_MD, CONTAINER_WIDTH } from '@src/theme';
+import Image from 'next/image';
 
 const useStyles = makeStyles((theme: Theme) => ({
   appbar: {
@@ -84,9 +86,11 @@ export const Header = (props: HeaderPropsInterface) => {
           maxWidth={false}
           style={{
             maxWidth: `${CONTAINER_WIDTH / 10}rem`,
-          }}>
+          }}
+        >
           <Link href="/" withoutMaterial title={t('common.homepage')}>
-            <Logo className={classes.corporateLogo} />
+            {/* <Logo className={classes.corporateLogo} /> */}
+            <Image width={200} height={70} alt="Logo" src={LogoPng} />
           </Link>
           <Box display={{ xs: 'none', md: 'block' }}>
             <div className={classes.menuWrapper}>
@@ -102,7 +106,8 @@ export const Header = (props: HeaderPropsInterface) => {
             onClick={() => onMenuClick?.()}
             aria-controls="mobile-menu"
             aria-expanded={isMenuOpen}
-            aria-haspopup="dialog">
+            aria-haspopup="dialog"
+          >
             <Menu />
           </IconButton>
         </Box>

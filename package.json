@@ -47,6 +47,7 @@
     "clsx": "^1.2.1",
     "dotenv": "^16.0.1",
     "graphql": "^16.5.0",
+    "i18n": "^0.15.1",
     "intersection-observer": "^0.12.2",
     "lodash": "^4.17.21",
     "next": "12.3.1",
