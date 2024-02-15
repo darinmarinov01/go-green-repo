@@ -39,7 +39,7 @@ export const Layout: React.FC<LayoutPropsInterface> = ({ children }) => {
       }
 
       if (document.activeElement instanceof HTMLElement) {
-        document.activeElement.blur();
+        document.activeElement.blur()
       }
     });
   }, [router.events]);
