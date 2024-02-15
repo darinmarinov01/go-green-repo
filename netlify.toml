@@ -1,2 +1,2 @@
 [build]
-  command = yarn next build"
+  command = "NEXT_PUBLIC_BASE_URL=\"${NEXT_PUBLIC_BASE_URL:-$URL}\" next build"
